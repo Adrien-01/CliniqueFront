@@ -1,0 +1,75 @@
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-6">
+                <h1 align="center">Ajouter une operation</h1>
+                <div class="form-group">
+                       
+                        <mat-form-field class="date">
+                                <input matInput [matDatepicker]="picker" placeholder="Date Operation" [(ngModel)]="nouvelleOperation.date" name="date" >
+                                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                                <mat-datepicker #picker></mat-datepicker>
+                              </mat-form-field>
+
+                    
+                       
+                        <mat-accordion>
+                                <mat-expansion-panel class="accordeon">
+                                  <mat-expansion-panel-header>
+                                    <mat-panel-title>
+                                      Réserver une opération
+                                    </mat-panel-title>
+                                    <mat-panel-description>
+                                      Inscrire le medecin, le patient et la salle
+                                    </mat-panel-description>
+                                  </mat-expansion-panel-header>
+                                  <label for="formGroupExampleInput">Medecin</label>
+                                  <select class="form-control" [(ngModel)]="medecin" id="formGroupExampleInput" name="medecin">
+                                      <option *ngFor="let rowmedecin of listMedecin" [ngValue]="rowmedecin.idMedecin">
+                                          {{rowmedecin.prenom}}
+                                      </option>
+                                  </select>
+              
+                                  <label for="formGroupExampleInput">Patient</label>
+                                  <select class="form-control" [(ngModel)]="patient" id="formGroupExampleInput" name="patient">
+                                      <option *ngFor="let rowpatient of listPatient" [ngValue]="rowpatient.idPatient">
+                                          {{rowpatient.nom}}
+                                      </option>
+                                  </select>
+              
+                                  <label for="formGroupExampleInput">Salle</label>
+                                  <select class="form-control" [(ngModel)]="salle" id="formGroupExampleInput" name="salle">
+                                      <option *ngFor="let rowsalle of listSalle" [ngValue]="rowsalle.idSalle">
+                                          {{rowsalle.numero}}
+                                      </option>
+                                  </select>
+                                 
+                                </mat-expansion-panel>
+                                <mat-expansion-panel (opened)="panelOpenState = true"
+                                                     (closed)="panelOpenState = false">
+                               
+                                </mat-expansion-panel>
+                              </mat-accordion>
+
+
+                    
+
+                    <button (click)="notif()" class="btn btn-primary center-block boutonAjouter">Ajouter
+                           
+                    </button>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</form>
+
+
+
+

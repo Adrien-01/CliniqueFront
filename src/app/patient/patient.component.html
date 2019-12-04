@@ -1,0 +1,37 @@
+<div class="search-patient">
+
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+        placeholder="Rechercher un patient">
+
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Identifiant</th>
+            <th scope="col">Dossier Medical</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Etat</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rowpatient of listPatients | filter:searchText; let i=index">
+            <td>{{rowpatient.idPatient}}</td>
+            <td>{{rowpatient.dossierMedical}}</td>
+            <td>{{rowpatient.nom}}</td>
+            <td>{{rowpatient.prenom}}</td>
+            <td>{{rowpatient?.etat?.libelle}}</td>
+            <td><button type="button" (click)="deletePatient(rowpatient.idPatient,i)"
+                    class="btn btn-danger">Supprimer</button></td>
+            <td> <button type="button" class="btn btn-info"
+                    [routerLink]="['/modifPatient', rowpatient.idPatient]">Modifier</button> </td>
+
+
+        </tr>
+     
+
+
+    </tbody>
+</table>
+
+

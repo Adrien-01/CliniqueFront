@@ -1,0 +1,29 @@
+.monTitre{
+    
+    text-align: center;
+    margin: 80px;
+    font: small-caps bold 24px/1 sans-serif;
+    font-size: 50px;
+   
+
+}
+.boutonV{
+    
+    margin-left: 10px;
+    margin-right: 10px;
+   
+}
+.couleurBarre{
+    
+    align-items: center;
+    
+}
+.navbar-brand{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style :italic;
+    font-size: 20px;
+  
+ 
+
+   
+}

@@ -1,0 +1,18 @@
+.example-card {
+    max-width: 20%;
+    margin: 5%;
+  }
+  
+  .example-header-image {
+    background-image: url('https://resize-public.ladmedia.fr/img/var/public/storage/images/dossiers/musique-cine-series/news/grey-s-anatomy-docteur-mamour-ne-serait-pas-vraiment-mort-1407392/36635951-1-fre-FR/Grey-s-Anatomy-Docteur-Mamour-ne-serait-pas-vraiment-mort-!.jpg');
+    background-size: cover;
+  }
+  .gregory {
+    background-image: url('http://images.lpcdn.ca/924x615/201402/06/809154-dr-gregory-house-interprete-acteur.jpg');
+    background-size: cover;
+  }
+  .quinn {
+    background-image: url('https://resize-parismatch.lanmedia.fr/img/var/news/storage/images/paris-match/culture/medias/l-evolution-physique-de-jane-seymour-l-actrice-de-docteur-quinn-femme-medecin-1468238/24090158-1-fre-FR/L-evolution-physique-de-Jane-Seymour-l-actrice-de-Docteur-Quinn-femme-medecin.jpg');
+    background-size: cover;
+  }
+  

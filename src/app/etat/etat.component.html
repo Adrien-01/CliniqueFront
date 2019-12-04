@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Identifiant</th>
+            <th scope="col">Libellé</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rowetat of listEtats; let i=index">
+            <td>{{rowetat.idEtat}}</td>
+            <td>{{rowetat.libelle}}</td>
+            <td><button type="button" (click)="deleteEtat(rowetat.idEtat,i)" class="btn btn-danger">Supprimer</button>
+            </td>
+            <td> <button type="button" class="btn btn-info"
+                    [routerLink]="['/modifEtat', rowetat.idEtat]">Modifier</button> </td>
+        </tr>
+
+
+    </tbody>
+</table>

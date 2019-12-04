@@ -1,0 +1,50 @@
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-6">
+                <h1 align="center">Modifier une operation</h1>
+                <div class="form-group">
+
+                    <label for="formGroupExampleInput">Date</label>
+                    <input type="date" class="form-control" id="formGroupExampleInput"
+                        [(ngModel)]="operation1.date" name="date">
+
+
+                    <label for="formGroupExampleInput">Medecin</label>
+                    <select class="form-control" [(ngModel)]="medecin" 
+                        id="formGroupExampleInput" name="medecin" a>
+                        
+                        <option *ngFor="let rowmedecin of listMedecin" [ngValue]="rowmedecin.idMedecin">
+                            {{rowmedecin.prenom}}
+                        </option>
+                    </select >
+
+                    <label for="formGroupExampleInput">Patient</label>
+                    <select class="form-control" [(ngModel)]="patient" 
+                        id="formGroupExampleInput" name="patient">
+                        <option *ngFor="let rowpatient of listPatient" [ngValue]="rowpatient.idPatient">
+                            {{rowpatient.nom}}
+                        </option>
+                    </select >
+
+                    <label for="formGroupExampleInput">Salle</label>
+                    <select class="form-control" [(ngModel)]="salle" 
+                        id="formGroupExampleInput" name="salle">
+                        <option *ngFor="let rowsalle of listSalle" [ngValue]="rowsalle.idSalle">
+                            {{rowsalle.numero}}
+                        </option>
+                    </select >
+                   
+                    <button (click)="notif()" class="btn btn-primary center-block boutonAjouter">Modifier</button>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</form>

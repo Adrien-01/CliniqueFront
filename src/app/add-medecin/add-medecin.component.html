@@ -1,0 +1,37 @@
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-6">
+                <h1 align="center">Ajouter un medecin</h1>
+                <div class="form-group">
+
+                    <label for="formGroupExampleInput">Nom</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="nom"
+                        [(ngModel)]="nouveauMedecin.nom" name="nom">
+
+                    <label for="formGroupExampleInput">Prenom</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" placeholder="prenom"
+                        [(ngModel)]="nouveauMedecin.prenom" name="prenom">
+
+
+                    <label for="formGroupExampleInput">Service</label>
+                    <select class="form-control" [(ngModel)]="specialite" 
+                        id="formGroupExampleInput" name="specialite">
+                        <option *ngFor="let rowspecialite of listSpecialite" [ngValue]="rowspecialite.idService">
+                            {{rowspecialite.nom}}
+                        </option>
+                    </select >
+                   
+                    <button (click)="notif()" class="btn btn-primary center-block boutonAjouter">Ajouter</button>
+
+                </div>
+            </div>
+
+
+        </div>
+
+
+    </div>
+</form>

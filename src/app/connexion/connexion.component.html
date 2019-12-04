@@ -1,0 +1,87 @@
+<body>
+   
+  <div class="container">
+  <div class="row">
+    <div class="col-sm-9  mx-auto">
+
+      <p class="display-3" Align="center">Clinique de la joie</p>
+      <p class="display-6" Align="center">Une clinique qui vous accompagne</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card card-signin my-5">
+        <div class="card-body">
+          <h5 class="card-title text-center">Connexion</h5>
+          <form class="form-signin">
+            <label for="inputlogin">Login</label>
+            <div class="form-label-group">
+
+              <input type="text" id="inputlogin" class="form-control" [(ngModel)]="user1.login" name="login"
+                placeholder="login" required autofocus>
+
+            </div>
+            <label for="inputPassword">Mot de passe</label>
+            <div class="form-label-group">
+              <input type="password" id="inputPassword" class="form-control" [(ngModel)]="user1.motDePasse"
+                name="motDePasse" placeholder="Mot de passe" required>
+
+            </div>
+
+
+            <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="conUser()">Se connecter</button>
+            <hr class="my-4">
+       
+            
+            
+                <button type="button" class="btn btn-lg btn-google btn-block text-uppercase" data-toggle="modal" data-target="#exampleModal">
+                  Créer un compte
+                </button>
+                
+                
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                  <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Inscription</h5>
+                        
+                      </div>
+                      <div class="modal-body">
+                        <form class="form-signin">
+                          <label for="formGroupExampleInput">Login</label>
+                      <div class="form-label-group">
+                          <input type="text" class="form-control" id="formGroupExampleInput" placeholder="login"
+                              [(ngModel)]="nouveauUser.login" name="login">
+                      </div>
+                      <label for="formGroupExampleInput">Mot de passe</label>
+                      <div class="form-label-group">
+                      <input type="text" class="form-control" id="formGroupExampleInput" placeholder="mot de passe"
+                          [(ngModel)]="nouveauUser.motDePasse" name="motDePasse">
+                      </div>
+                          
+                      <label for="formGroupExampleInput">Email</label>
+                      <div class="form-label-group">
+                      <input type="email" class="form-control" id="formGroupExampleInput" placeholder="exemple@"
+                          [(ngModel)]="nouveauUser.email" name="email" required aria-required="true">
+                          </div>
+                        
+
+
+
+                  </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary" (click)="addUser()">s'inscrire</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>

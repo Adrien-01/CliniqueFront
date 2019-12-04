@@ -1,0 +1,20 @@
+<form>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+    
+                <div class="col-sm-6">
+                    <h1 align="center">Ajouter une spécialité</h1>
+                    <div class="form-group">
+                        <label for="name">Nom</label>
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="exemple : Cardio"
+                            [(ngModel)]="nouvelleSpecialite.nom" name="nom">
+                
+                    <button (click)="notif()" class="btn btn-primary center-block boutonAjouter">Ajouter</button>
+                  
+                
+                </div>
+            </div>
+            </div>
+        </div>
+    </form>

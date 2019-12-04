@@ -1,0 +1,39 @@
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-6">
+                <h1 align="center">Modifier un patient</h1>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Nom</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" 
+                        [(ngModel)]="patient1.nom" name="nom">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Prenom</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" 
+                        [(ngModel)]="patient1.prenom" name="prenom">
+                </div>
+                
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Dossier Medical</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" 
+                        [(ngModel)]="patient1.dossierMedical" name="dossierMedical">
+                </div>
+               
+                <label for="formGroupExampleInput">Etat</label>
+                    <select class="form-control" [(ngModel)]="etat" 
+                        id="formGroupExampleInput" name="etat">
+                        <option *ngFor="let rowetat of listEtat" [ngValue]="rowetat.idEtat">
+                            {{rowetat.libelle}}
+                        </option>
+                    </select >
+                <a  role="button" (click)="modifier()"
+                        class="btn btn-primary center-block">Modifier </a>
+            </div>
+        </div>
+
+    </div>
+</form>

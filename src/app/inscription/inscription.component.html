@@ -1,0 +1,37 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+            <div class="card card-signin my-5">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Inscription</h5>
+                    <form class="form-signin">
+                            <label for="formGroupExampleInput">Login</label>
+                        <div class="form-label-group">
+                            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="login"
+                                [(ngModel)]="nouveauUser.login" name="login">
+                        </div>
+                        <label for="formGroupExampleInput">Mot de passe</label>
+                        <div class="form-label-group">
+                        <input type="text" class="form-control" id="formGroupExampleInput" placeholder="mot de passe"
+                            [(ngModel)]="nouveauUser.motDePasse" name="motDePasse">
+                        </div>
+                            
+                        <label for="formGroupExampleInput">Email</label>
+                        <div class="form-label-group">
+                        <input type="email" class="form-control" id="formGroupExampleInput" placeholder="exemple@"
+                            [(ngModel)]="nouveauUser.email" name="email" required aria-required="true">
+                            </div>
+                           
+
+
+                            <button class="btn btn-lg btn-primary btn-block text-uppercase" (click)="addUser()">s'inscrire</button>
+
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

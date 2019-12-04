@@ -1,0 +1,19 @@
+.display-4{
+    margin: 10px;
+    text-shadow:none;color :teal;
+    
+ 
+}
+
+.display-6{
+    text-shadow:none;color :teal;
+
+ 
+}
+.embed-responsive{
+    border:5px solid teal;
+    -moz-border-radius:7px;
+    -webkit-border-radius:7px;
+    border-radius:7px;
+    
+}

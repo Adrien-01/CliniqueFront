@@ -1,0 +1,37 @@
+<h1 align="center">Operations</h1>
+<div class="search-patient">
+
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+        placeholder="Rechercher une opération">
+
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Identifiant</th>
+            <th scope="col">Date</th>
+            <th scope="col">Medecin</th>
+            <th scope="col">Patient</th>
+            <th scope="col">Salle</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rowoperation of listOperation  | filter:searchText; let i=index">
+            <td>{{rowoperation.idOpeartion}}</td>
+            <td>{{rowoperation.date}}</td>
+            <td>{{rowoperation?.medecin?.nom}}</td>
+            <td>{{rowoperation?.patient?.nom}}</td>
+            <td>{{rowoperation?.salle?.numero}}</td>
+            <td><button type="button" (click)="deleteOperation(rowoperation.idOpeartion,i)"
+                    class="btn btn-danger">Supprimer</button></td>
+                    <td> <button type="button" class="btn btn-info"
+                        [routerLink]="['/modifOperation', rowoperation.idOpeartion]">Modifier</button> </td>
+
+
+
+        </tr>
+
+
+
+
+    </tbody>

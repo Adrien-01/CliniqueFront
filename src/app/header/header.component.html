@@ -1,0 +1,82 @@
+<nav class="navbar navbar-expand-lg navbar-light  couleurBarre">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+    aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <a class="navbar-brand" [routerLink]="['']">Clinique de la joie</a>
+    <ul class="navbar-nav mr-auto mt-3 mt-lg-0">
+
+
+      <div class="dropdown boutonV">
+        <a class="btn btn-info dropdown-toggle texteB" href="#" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Patients
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" [routerLink]="['/patients']">Liste Patient</a>
+          <a class="dropdown-item" [routerLink]="['/addPatients']">Ajouter Patient</a>
+
+        </div>
+
+      </div>
+
+
+      <div class="dropdown boutonV">
+        <a class="btn btn-info dropdown-toggle texteB" href="#" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Medecin
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" [routerLink]="['/medecin']">Liste des medecins</a>
+          <a class="dropdown-item" [routerLink]="['/addMedecin']">Ajouter medecin</a>
+        </div>
+      </div>
+
+
+      <div class="dropdown boutonV">
+        <a class="btn  btn-info dropdown-toggle texteB" href="#" role="button" id="dropdownMenuLink"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Operations
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" [routerLink]="['/operation']">Liste operations</a>
+          <a class="dropdown-item" [routerLink]="['/addOperation']">Ajouter operation</a>
+        </div>
+
+      </div>
+
+
+    </ul>
+
+  </div>
+  <button mat-button [matMenuTriggerFor]="config" class="btn btn dropdown-toggle texteB" href="#"
+    role="button">Configuration</button>
+
+  <mat-menu #config="matMenu">
+    <button mat-menu-item [matMenuTriggerFor]="etat">Etat</button>
+    <button mat-menu-item [matMenuTriggerFor]="services">Services</button>
+    <button mat-menu-item [matMenuTriggerFor]="salles">Salles</button>
+  </mat-menu>
+
+  <mat-menu #etat="matMenu">
+    <a class="dropdown-item" [routerLink]="['/etats']">Liste Etat</a>
+    <a class="dropdown-item" [routerLink]="['/addEtat']">Ajouter un etat</a>
+  </mat-menu>
+
+  <mat-menu #services="matMenu">
+    <a class="dropdown-item" [routerLink]="['/specialite']">Liste des services</a>
+    <a class="dropdown-item" [routerLink]="['/addSpecialite']">Ajouter des services</a>
+  </mat-menu>
+
+  <mat-menu #salles="matMenu">
+      <a class="dropdown-item" [routerLink]="['/salle']">Liste des salles</a>
+      <a class="dropdown-item" [routerLink]="['/addSalle']">Ajouter salle</a>
+  </mat-menu>
+
+  <button mat-icon-button aria-label="Example home icon" [routerLink]="['/adresse']"  title="Ou nous trouvez ?" > <mat-icon>map</mat-icon></button>
+  <button mat-icon-button aria-label="Example home icon" (click)="decon()"  title="Deconnexion" > <mat-icon>input</mat-icon></button>
+
+
+</nav>

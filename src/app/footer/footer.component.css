@@ -1,0 +1,8 @@
+
+.pied{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: lightseagreen;
+    color: #fff;
+    }

@@ -1,0 +1,102 @@
+<h1 align="center">Medecins</h1>
+
+<div class="search-patient">
+
+    <input class="form-control" type="text" name="search" [(ngModel)]="searchText" autocomplete="off"
+        placeholder="Rechercher un medecin">
+
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Identifiant</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prenom</th>
+            <th scope="col">Service</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let rowmedecin of listMedecin | filter:searchText; let i=index">
+            <td>{{rowmedecin.idMedecin}}</td>
+            <td>{{rowmedecin.nom}}</td>
+            <td>{{rowmedecin.prenom}}</td>
+            <td>{{rowmedecin?.service?.nom}}</td>
+            <td><button type="button" (click)="deleteMedecin(rowmedecin.idMedecin,i)"
+                    class="btn btn-danger">Supprimer</button></td>
+            <td> <button type="button" class="btn btn-info"
+                    [routerLink]="['/modifMedecin', rowmedecin.idMedecin]">Modifier</button> </td>
+
+        </tr>
+
+
+    </tbody>
+</table>
+<div class="conteneur">
+    <div class="row">
+        <mat-card class="example-card">
+               
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Derek Shepherd</mat-card-title>
+                <mat-card-subtitle>Chirurgien</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image
+                src="https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/people/la-vie-des-people/news/patrick-dempsey-quel-avenir-pour-le-docteur-mamour/54234374-2-fre-FR/Patrick-Dempsey-quel-avenir-pour-le-Docteur-Mamour.jpg"
+                alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                    Le Dr Shepherd est un neurochirurgien de très bonne réputation, titulaire en neurochirurgie à
+                    l'hôpital Seattle Grace
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+            </mat-card-actions>
+        </mat-card>
+   
+
+
+  
+        <mat-card class="example-card">
+            <mat-card-header>
+                <div mat-card-avatar class="example-header-image gregory"></div>
+                <mat-card-title>Gregory House</mat-card-title>
+                <mat-card-subtitle>Diagnosticien</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image
+                src="https://quoteswisher.com/wp-content/uploads/2019/02/Famous-Quotes-by-Dr-Gregory-house.jpg"
+                alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <p>
+                        House est le chef du département de médecine diagnostique du centre hospitalier
+                </p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+            </mat-card-actions>
+        </mat-card>
+        
+
+        <mat-card class="example-card">
+                <mat-card-header>
+                    <div mat-card-avatar class="example-header-image quinn"></div>
+                    <mat-card-title>Michaela Quinn</mat-card-title>
+                    <mat-card-subtitle>Medecin Generaliste</mat-card-subtitle>
+                </mat-card-header>
+                <img mat-card-image
+                    src="https://resize-parismatch.lanmedia.fr/img/var/news/storage/images/paris-match/culture/medias/jane-seymour-et-joe-lando-reforment-le-couple-mythique-de-docteur-quinn-21-ans-apres-1643024/26817334-1-fre-FR/Jane-Seymour-et-Joe-Lando-reforment-le-couple-mythique-de-Docteur-Quinn-21-ans-apres.jpg"
+                    alt="Photo of a Shiba Inu">
+                <mat-card-content>
+                    <p>
+                            Femme medecin, aussi appelée « Dr Mike », venue s'installer à Colorado Springs (Colorado) 
+                    </p>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                </mat-card-actions>
+            </mat-card>
+    </div>
+</div>

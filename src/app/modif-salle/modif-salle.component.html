@@ -1,0 +1,31 @@
+<form>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3"></div>
+
+            <div class="col-sm-6">
+                <h1 align="center">Modifier une salle</h1>
+
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Etage</label>
+                    <input type="number" class="form-control" id="formGroupExampleInput" 
+                        [(ngModel)]="salle1.etage" name="etage">
+                </div>
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Numero</label>
+                    <input type="number" class="form-control" id="formGroupExampleInput" 
+                        [(ngModel)]="salle1.numero" name="numero">
+                </div>
+                
+                <div class="form-group">
+                    <label for="formGroupExampleInput">Type</label>
+                    <input type="text" class="form-control" id="formGroupExampleInput" 
+                        [(ngModel)]="salle1.type" name="etage">
+                </div>
+                <a href="http://localhost:4200/salle"  role="button" (click)="modifier()"
+                        class="btn btn-primary center-block">Modifier </a>
+            </div>
+        </div>
+
+    </div>
+</form>
